@@ -1,0 +1,37 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+
+<div class="container" style="margin-top: 5rem; min-height:80vh;">
+
+  <%- include("../partials/flash")%>
+
+  
+    <div class="row ">
+        <div class="col-12 ">
+            <h5 class="card-title fs-1 "> Profile </h5>
+            <div class="card" >
+                <div style="background-color:#E8E8E8">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="rounded mx-auto d-block" alt="..."style="width:30vw;height:20vw; opacity: 0.7;" >
+                </div>
+                <div class="card-body">
+                    <%if(currentUser){%>
+                  <h5 class="card-title"><%=currentUser.username %></h5>
+                
+                  <p class="card-text" style="white-space: pre-wrap;"><%= currentUser.email %></p>
+
+                  <div class="mt-3">
+                    <form action="/logout" method="GET">
+                        <button class="btn btn-danger">Logout</button>
+                  </form>
+                  </div>
+                 <% } %>
+                </div>
+              </div>
+        </div>
+        </div>
+        
+        
+</div>
+
+
+<%- include("../partials/footer")%>

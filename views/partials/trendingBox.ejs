@@ -1,0 +1,20 @@
+<div class="col-md-4 col-sm-12 trending"   style=" background-color:rgba(241, 225, 204, 0.856);max-height:40vh;padding-top:8px;">
+    <div class="row">
+    <h4 class="fs-6 ml-2 mb-3">Trending Tags</h4>
+    <div style="margin-left:4px;padding:4px;">
+   <% for(tt of trendingTags) { %>
+    <a href="/search?q=<%=tt.tag%>"><p  class="badge rounded-pill bg-secondary" style="font-size:0.8rem" ><%= tt.tag %></p></a>
+    <% }%>
+  </div>
+  </div>
+  <hr class="my-4 mt-2 ">
+  <div class="row">
+    <h4 class="fs-6 ml-2 mb-3">Trending Writers</h4>
+      <div style="margin-left:4px;padding:4px;">
+     <% for(tt of trendingWriters) { %>
+        <a href="/publicProfile?q=<%=tt.user._id%>"><p  class="badge rounded-pill bg-secondary" style="font-size:0.8rem"><%= tt.user.username %></p>
+      <% }%>
+    </div>
+  </div>
+    </div>
+   
