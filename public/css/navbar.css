@@ -20,3 +20,19 @@ background-color:#000000;
         top:0px; */
         height: 100%;
   }
+
+#srchBox {
+
+  width:30vw;
+  margin:auto ;
+}
+  @media only screen and (max-width: 734px) {
+    #srchBox {
+      width:90vw;
+      background-color: brown;
+      margin:0px;
+    }
+    
+  }
+  
+  

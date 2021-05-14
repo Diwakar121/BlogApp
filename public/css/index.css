@@ -8,7 +8,7 @@
   
 
 .content {
-    height:90vh;
+    min-height:90vh;
     margin:2rem;
 }
 
@@ -16,9 +16,34 @@
 .box {
     width:30vw;
     margin:20px auto;
+   
 }
 
-  /* Disclaimer- This Animation code below does not belong to me , just added for a nice ui */
+#mainImg {
+  position: fixed;
+  right:0;
+  top:10px;
+  z-index: -1;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Disclaimer- This Animation code below does not belong to me , just added for a nice ui */
 
   /* DEMO-SPECIFIC STYLES */
 
@@ -26,6 +51,7 @@
      
     color: rgb(37, 3, 48);
     font-family: monospace;
+    font-size: 3vw;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -37,8 +63,6 @@
   }
   
 
-  
-  
   
   
   /* The typing effect */
@@ -62,12 +86,13 @@
   .css-typing p {
     border-right: .15em solid orange;
     font-family: "Courier";
-    font-size: 46px;
+    font-size: 3vw;
+    color:rgb(60, 0, 156);
     white-space: nowrap;
     overflow: hidden;
   }
   .css-typing p:nth-child(1) {
-    width: 100vw;
+    width: 100%;
     -webkit-animation: type 2s steps(40, end);
     animation: type 2s steps(40, end);
     -webkit-animation-fill-mode: forwards;
@@ -75,7 +100,7 @@
   }
   
   .css-typing p:nth-child(2) {
-    width: 100vw;
+    width: 100%;
     opacity: 0;
     -webkit-animation: type2 2s steps(40, end);
     animation: type2 2s steps(40, end);
@@ -86,7 +111,7 @@
   }
   
   .css-typing p:nth-child(3) {
-    width: 100vw;
+    width: 100%;
     opacity: 0;
     -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
     animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
@@ -186,3 +211,7 @@
       border-color: tranparent;
     }
   }
+
+
+
+  
