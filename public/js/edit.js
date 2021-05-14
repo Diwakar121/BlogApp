@@ -81,7 +81,7 @@ $('#submitPost').click(function(e){
     const data={blog:obj};
     const id = $('.container').attr('id');
 
-fetch(`http://localhost:3000/blogs/${id}`, {
+fetch(`/blogs/${id}`, {
   method: 'PUT', 
   body: JSON.stringify(data),
   headers: {
@@ -90,11 +90,11 @@ fetch(`http://localhost:3000/blogs/${id}`, {
 
 }).then((res) => {if(res.status==200)
                    {
-                    window.location.href =`http://localhost:3000/blogs/${id}`;
+                    window.location.href =`/blogs/${id}`;
                    }                                                                        
 })
 .catch((e)=>{console.log(e);
-  window.location.href =`http://localhost:3000/error`;
+  window.location.href =`/error`;
 })
 
 console.log("submit");

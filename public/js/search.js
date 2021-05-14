@@ -1,7 +1,7 @@
 function makeSearch() {
     var q=$('#srchVal').val();
     console.log(`u srchd ${q}`);
-    window.location.href =`http://localhost:3000/search?q=${q}`;
+    window.location.href =`/search?q=${q}`;
       
 }
 

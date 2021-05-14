@@ -90,7 +90,7 @@ $('#submitPost').click(function(e){
     console.log(obj);
      const data={blog:obj};
 
-    fetch('http://localhost:3000/blogs', {
+    fetch('/blogs', {
   method: 'POST', 
   body: JSON.stringify(data),
   headers: {
@@ -99,7 +99,7 @@ $('#submitPost').click(function(e){
 
 }).then((res) => {if(res.status==200)
                    {
-                    window.location.href ='http://localhost:3000/blogs';
+                    window.location.href ='/blogs';
                    }                                                                        
 })
 .catch((e)=>{console.log(e);})

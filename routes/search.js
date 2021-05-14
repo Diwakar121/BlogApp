@@ -5,12 +5,12 @@ const Search= require('../models/search');
 
 router.get('/search',async(req, res) => {
     try {
-       console.log(req.query.q);
+       
           var srchResult=  await Search.findOne({tag:req.query.q}).populate('links');
-          console.log(srchResult);
+          
           if(!srchResult)
           {
-            console.log(srchResult);
+            
                  res.render('blogs/srchShow',{srchResult:{links:[]}});
           }
     
