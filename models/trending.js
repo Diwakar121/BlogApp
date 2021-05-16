@@ -3,7 +3,7 @@ const Blog= require('./blog');
 
 const trendingSchema = new mongoose.Schema({
  
-    day:{type:Number},
+    day:{type:Date},
 
     blogTrend:
         {

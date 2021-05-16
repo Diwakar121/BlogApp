@@ -12,7 +12,8 @@
           <h4 class="display-6 mb-3"> <i class="fas fa-chart-line" style="margin-right: 20px;"></i>Trending...</h4>
 
           <%for(let trending of trendings){%>
-            <% blog=trending.blogTrend %>
+            <% blog=trending %>
+            
             <div class="card mb-5" >
               <div class="row no-gutters">
                 <div class="col-md-4 col-sm-12">
@@ -23,13 +24,14 @@
                     <h5 class="card-title m-0 p-0" style="max-height:4vh;"><%= blog.title %></h5>
                     <p class="card-text m-0 p-0" style="max-height:7vh;  overflow:hidden;   text-overflow: ellipsis;"><%= blog.desc %>...</p>
                     <p><small class="text-muted">3 mins read</small></p>
-                    
                     <% var i=0 %>
-                    <%for(let tag of blog.tags){%>
-                      <% if(i==5) {break;} %>
-                      <% if(tag.length<3){continue;} %> 
-                       <p  class="badge rounded-pill bg-secondary" style="font-size:0.8rem"><%= tag %></p>
-                      <% i+=1;}%>
+                    <% if(blog.tags &&  blog.tags.length >0){ %>
+      <%for(let tag of blog.tags){%>
+        <% if(i==5) {break;} %>
+        <% if(tag.length<3){continue;} %> 
+         <p  class="badge rounded-pill bg-secondary" style="font-size:0.8rem"><%= tag %></p>
+        <% i+=1;}}%>
+                    
                     <p class="text-center" style="max-height:5vh;display:inline-block;">
                       <a href="/blogs/<%= blog._id %>" class="btn btn-dark ">View Article>></a>
                     </p>

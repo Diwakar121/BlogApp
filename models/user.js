@@ -7,7 +7,12 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique:true
     },
-    
+    myblogs:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Blog'
+        }
+    ]
 })
 
 userSchema.plugin(passportLocalMongoose);

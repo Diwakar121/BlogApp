@@ -6,7 +6,11 @@ function makeSearch() {
 }
 
 
-
+$('#notify').on('click', function(e){
+ 
+  alert('No new Notifications');
+ 
+})
 
 
 

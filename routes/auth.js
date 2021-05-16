@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const passport = require('passport');
+const { isLoggedIn } = require('../middleware');
 
 
 
@@ -58,8 +59,12 @@ router.get('/logout', (req, res) => {
     res.redirect('/login');
 })
 
-router.get('/myprofile', (req, res) => {
-    res.render('user/myprofile');
+router.get('/myprofile',isLoggedIn, async(req, res) => {
+
+    var user = await User.findById(req.user._id).populate('myblogs');
+
+    res.render('user/myprofile',{user});
+
 })
 
 module.exports = router;

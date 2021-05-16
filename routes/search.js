@@ -18,9 +18,9 @@ router.get('/search',async(req, res) => {
     
     }
     catch (e) {
-        console.log(e.message);
+      
         req.flash('error', 'Nothing mactched to your search');
-        res.render('error');
+        res.redirect('/error');
     }
 });
 

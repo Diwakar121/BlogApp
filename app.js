@@ -14,6 +14,14 @@ const LocalStrategy = require('passport-local');
 
 
 
+//////////////////////////////////////////////////
+const {update,deleteOld} = require('./continuous');
+update();
+deleteOld();
+//////////////////////////////////////////////////
+
+
+
 //models
 const Blog = require('./models/blog');
 const User = require('./models/user');
